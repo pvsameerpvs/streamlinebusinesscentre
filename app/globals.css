@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff8ef;
+  --foreground: #1e1b18;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* --- Amenities marquee --- */
+
+.marquee-track {
+  animation: marquee-scroll 60s linear infinite;
+}
+
+/* Outlined golden text like the design */
+.marquee-text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #d4a574;
+  /* helps with readability on dark bg */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Hide scrollbar but keep scroll behaviour */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
+/* hide scrollbar but keep scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
