@@ -32,7 +32,6 @@ export function HeroSection() {
     Office space your way.
   </p>
 </div>
-
       </div>
 
       {/* Cream strip below hero */}
