@@ -10,7 +10,7 @@ import { CustomerHeroSection } from "@/components/home/customer-hero-section";
 
 export default function HomePage() {
   return (
-    <div className="bg-background">
+   <div className="bg-background w-full max-w-full overflow-x-hidden">
       {/* Service Navigation */}
       <ServiceNav />
 

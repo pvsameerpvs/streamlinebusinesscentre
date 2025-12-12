@@ -74,33 +74,42 @@ export function FlexibleWorkspaceSection() {
         </div>
 
         {/* Tabs */}
-        <div className="mb-12 flex justify-center">
-          <div className="inline-flex rounded-full bg-[#c99652] px-2 py-1 shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
-            {workspaceTabs.map((tab) => {
-              const isActive = tab.key === activeTab;
-              return (
-                <button
-                  key={tab.key}
-                  type="button"
-                  onClick={() => {
-                    setActiveTab(tab.key);
-                    // reset scroll when switching tab
-                    if (sliderRef.current) {
-                      sliderRef.current.scrollTo({ left: 0, behavior: "instant" as ScrollBehavior });
-                    }
-                  }}
-                  className={`rounded-full px-10 py-3 text-sm font-medium transition ${
-                    isActive
-                      ? "bg-[#3b3028] text-white shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
-                      : "text-[#3b3028] hover:bg-[#3b3028]/10"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        {/* Tabs */}
+<div className="mb-12">
+  {/* Mobile: allow horizontal scroll */}
+  <div className="no-scrollbar overflow-x-auto">
+    <div className="mx-auto w-max">
+      <div className="inline-flex rounded-full bg-[#c99652] px-2 py-1 shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
+        {workspaceTabs.map((tab) => {
+          const isActive = tab.key === activeTab;
+          return (
+            <button
+              key={tab.key}
+              type="button"
+              onClick={() => {
+                setActiveTab(tab.key);
+                if (sliderRef.current) {
+                  sliderRef.current.scrollTo({
+                    left: 0,
+                    behavior: "instant" as ScrollBehavior,
+                  });
+                }
+              }}
+              className={`whitespace-nowrap rounded-full px-4 py-3 text-sm font-medium transition sm:px-6 md:px-10 ${
+                isActive
+                  ? "bg-[#3b3028] text-white shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
+                  : "text-[#3b3028] hover:bg-[#3b3028]/10"
+              }`}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* Slider */}
         <div className="relative">

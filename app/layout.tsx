@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/footer";
+import N8nChat from "@/components/N8nChat";
 
 export const metadata: Metadata = {
   title: "Streamline Business Centre | Office space your way",
@@ -20,6 +21,9 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <SiteFooter />
+
+        {/* Bottom-right AI chat widget */}
+        <N8nChat />
       </body>
     </html>
   );
