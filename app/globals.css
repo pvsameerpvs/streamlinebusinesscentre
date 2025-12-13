@@ -133,3 +133,18 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -4.75px;
+}
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}

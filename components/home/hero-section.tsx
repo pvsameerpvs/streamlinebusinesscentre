@@ -21,17 +21,25 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/40" />
 
         {/* Hero content */}
-       <div className="container relative z-10 flex h-full flex-col items-center justify-start pt-20 pb-32 text-center">
-  <h1 className="max-w-4xl text-4xl font-extrabold tracking-[-0.02em] leading-tight text-white md:text-5xl lg:text-7xl">
-  From a single desk to a whole
-  <br />
-  building. The choice is yours.
-</h1>
+<div className="container relative z-10 flex h-full flex-col items-center justify-start pt-2 text-center md:justify-start md:pt-72 md:pb-32">
+  <h1 className="hero-title max-w-4xl text-white">
+    From a single desk to a whole
+    <br />
+    building. The choice is yours.
+  </h1>
 
-  <p className="mt-6 font-serif text-4xl italic text-[#d4a574] md:text-5xl">
+  <p className="mt-2 font-serif text-4xl italic text-[#d4a574] md:text-5xl">
     Office space your way.
   </p>
 </div>
+
+
+
+
+
+
+
+
       </div>
 
       {/* Cream strip below hero */}
