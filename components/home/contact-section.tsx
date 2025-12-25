@@ -27,7 +27,7 @@ export function ContactSection() {
             <div className="flex flex-col items-center gap-2">
               <MapPin className="h-6 w-6" />
               <span className="text-sm">
-                The Regal Tower, Business Bay, Dubai, UAE
+                The Regal Tower, 18th Floor, Business Bay, Dubai
               </span>
             </div>
           </div>

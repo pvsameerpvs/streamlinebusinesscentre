@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Phone, Menu, Search, ChevronRight, X } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
   return (
@@ -36,13 +42,31 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <Button
-            variant="default"
-            className="hidden h-10 gap-2 rounded-full bg-[#594d46] px-4 text-sm text-white hover:bg-[#4b3624] lg:flex"
-          >
-            <Phone className="h-4 w-4" />
-            +971 52 617 7052
-          </Button>
+<DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="default"
+                className="hidden h-10 gap-2 rounded-full bg-[#594d46] px-4 text-sm text-white hover:bg-[#4b3624] lg:flex"
+              >
+                <Phone className="h-4 w-4" />
+              +971 50 522 9908
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>
+                <a href="tel:+971505229908" className="flex items-center gap-2 w-full">
+                  <Phone className="h-4 w-4" />
+                  +971 50 522 9908
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+97143372857" className="flex items-center gap-2 w-full">
+                  <Phone className="h-4 w-4" />
+                  +971 4 337 2857
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           <Button
             variant="default"
