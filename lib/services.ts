@@ -26,6 +26,7 @@ export interface Service {
   short: string;
   description: string;
   highlights: string[];
+  images?: string[];
 }
 
 export const services: Service[] = [
@@ -39,6 +40,12 @@ export const services: Service[] = [
       "Move-in ready suites with premium furniture",
       "Front-desk reception and guest greeting",
       "On-site IT, cleaning and maintenance included"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -51,6 +58,12 @@ export const services: Service[] = [
       "Hot and dedicated desks available",
       "Complimentary tea, coffee and filtered water",
       "Secure high-speed Wi‑Fi and printing"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -63,6 +76,12 @@ export const services: Service[] = [
       "Mail handling and forwarding",
       "Local phone number and call answering options",
       "On-demand meeting room access"
+    ],
+    images: [
+      "/virtual-offices1.jpeg",
+      "/virtual-offices2.jpeg",
+      "/virtual-offices3.jpeg",
+      "/virtual-offices4.jpeg"
     ]
   },
   {
@@ -75,6 +94,12 @@ export const services: Service[] = [
       "Book by the hour or the day",
       "HD display, video conferencing and whiteboards",
       "Catering and concierge support on request"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -87,6 +112,12 @@ export const services: Service[] = [
       "Drop in to any participating Streamline location",
       "Exclusive community events and partner perks",
       "Ideal for hybrid and remote-first teams"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -99,6 +130,12 @@ export const services: Service[] = [
       "Use on trade licences, invoices and marketing",
       "Mail handling by our front-of-house team",
       "Optional virtual office and call answering"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -111,6 +148,12 @@ export const services: Service[] = [
       "Configurable layouts for 10–150 guests",
       "Professional AV and recording support",
       "On-site event coordination"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -123,6 +166,12 @@ export const services: Service[] = [
       "24/7 access with secure entry",
       "Ergonomic furniture and storage",
       "Custom branding options"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -135,6 +184,12 @@ export const services: Service[] = [
       "First-come, first-served desk access",
       "Community kitchen and lounge",
       "Business-grade Wi‑Fi"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -147,6 +202,12 @@ export const services: Service[] = [
       "Large screens and video conferencing",
       "Premium furnishings and finishes",
       "On-site support team"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -159,6 +220,12 @@ export const services: Service[] = [
       "Lockable pedestal storage",
       "24/7 access to your desk",
       "Access to meeting rooms and phone booths"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -171,6 +238,12 @@ export const services: Service[] = [
       "Acoustic insulation and ventilation",
       "Built-in power and lighting",
       "Ideal for video calls and interviews"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -183,6 +256,12 @@ export const services: Service[] = [
       "Branded welcome experience",
       "Mail and courier coordination",
       "Visitor registration and assistance"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -195,6 +274,12 @@ export const services: Service[] = [
       "Daily sorting and notifications",
       "Optional scanning and forwarding",
       "Secure package storage"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -207,6 +292,12 @@ export const services: Service[] = [
       "Workshops, panels and office-hours",
       "Partner offers from local ecosystem builders",
       "Showcase opportunities for members"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -219,6 +310,12 @@ export const services: Service[] = [
       "Complimentary tea, coffee and water",
       "Power outlets at every seat",
       "Drop-in friendly access"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -231,6 +328,12 @@ export const services: Service[] = [
       "Includes Wi‑Fi, utilities and cleaning",
       "Access to shared amenities and kitchen",
       "Perfect for interviews and workshops"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -243,6 +346,12 @@ export const services: Service[] = [
       "On-floor and basement storage options",
       "Flexible terms aligned to your office",
       "24/7 monitored access"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -255,6 +364,12 @@ export const services: Service[] = [
       "Secure print release",
       "Colour and large-format options",
       "Help from our community team"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   },
   {
@@ -267,6 +382,12 @@ export const services: Service[] = [
       "Network setup and monitoring",
       "Help with devices and conference tools",
       "Enterprise-ready security standards"
+    ],
+    images: [
+      "/office-1.jpeg",
+      "/office-2.jpeg",
+      "/office-3.jpeg",
+      "/office-4.jpeg"
     ]
   }
 ];
