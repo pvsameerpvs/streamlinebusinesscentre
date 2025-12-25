@@ -15,6 +15,14 @@ const workspaceTabs = [
 // TODO: replace these image paths with your actual images
 const workspaceImages: Record<string, string[]> = {
   "office-space": [
+    "/office-tab1.jpg",
+    "/office-tab2.png",
+    "/office-tab3.jpeg",
+    "/office-tab4.jpg",
+    "/office-tab5.jpg",
+    "/office-tab6.jpg",
+    "/office-tab7.jpg",
+    "/office-tab8.jpeg",
     "/office-1.jpeg",
     "/office-2.jpeg",
     "/office-3.jpeg",
@@ -23,24 +31,25 @@ const workspaceImages: Record<string, string[]> = {
     "/office-6.jpeg"
   ],
   coworking: [
-    "/images/coworking/coworking-1.jpg",
-    "/images/coworking/coworking-2.jpg",
-    "/images/coworking/coworking-3.jpg",
-    "/images/coworking/coworking-4.jpg",
-    "/images/coworking/coworking-5.jpg"
+    "/virtual-offices1.jpeg",
+    "/virtual-offices2.jpeg",
+    "/co.jpeg",
+    "/virtual-offices3.jpeg",
+    "/virtual-offices4.jpeg",
+    
   ],
   "virtual-offices": [
-    "/images/virtual-offices/virtual-1.jpg",
-    "/images/virtual-offices/virtual-2.jpg",
-    "/images/virtual-offices/virtual-3.jpg",
-    "/images/virtual-offices/virtual-4.jpg"
+    "/virtual-offices1.jpeg",
+    "/virtual-offices2.jpeg",
+    "/virtual-offices3.jpeg",
+    "/virtual-offices4.jpeg"
   ],
   "meeting-rooms": [
-    "/images/meeting-rooms/meeting-1.jpg",
-    "/images/meeting-rooms/meeting-2.jpg",
-    "/images/meeting-rooms/meeting-3.jpg",
-    "/images/meeting-rooms/meeting-4.jpg",
-    "/images/meeting-rooms/meeting-5.jpg"
+    "/meeting-spaces1.jpeg",
+    "/meeting-spaces2.jpeg",
+    "/meeting-spaces3.jpeg",
+    "/meeting-spaces4.jpeg",
+    "/meeting-spaces5.jpeg"
   ]
 };
 
