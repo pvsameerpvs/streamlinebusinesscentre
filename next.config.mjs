@@ -6,4 +6,4 @@ const nextConfig = {
     unoptimized: true,
   },
 };
-export default withNextVideo(nextConfig, { folder: "y" });
+export default withNextVideo(nextConfig);
