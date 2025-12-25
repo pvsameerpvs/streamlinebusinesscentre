@@ -96,10 +96,11 @@ export const services: Service[] = [
       "Catering and concierge support on request"
     ],
     images: [
-      "/office-1.jpeg",
-      "/office-2.jpeg",
-      "/office-3.jpeg",
-      "/office-4.jpeg"
+      "/meeting-spaces2.jpeg",
+      "/meeting-spaces1.jpeg",
+      "/meeting-spaces3.jpeg",
+      "/meeting-spaces4.jpeg",
+     
     ]
   },
   {
@@ -258,10 +259,10 @@ export const services: Service[] = [
       "Visitor registration and assistance"
     ],
     images: [
-      "/office-1.jpeg",
-      "/office-2.jpeg",
-      "/office-3.jpeg",
-      "/office-4.jpeg"
+      "/reception-services1.jpeg",
+      "/reception-services2.jpeg",
+      "/reception-services3.jpeg",
+      
     ]
   },
   {
