@@ -23,7 +23,7 @@ export default function RootLayout({
         <SiteFooter />
 
         {/* Bottom-right AI chat widget */}
-        <N8nChat />
+        {/* <N8nChat /> */}
       </body>
     </html>
   );
