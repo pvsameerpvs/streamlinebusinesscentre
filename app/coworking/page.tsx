@@ -56,8 +56,8 @@ export default function CoworkingPage() {
               </Button>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team on</span>
-                <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
-                  +971 505229908
+                <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">     
++971 505229908
                 </a>
               </div>
             </div>

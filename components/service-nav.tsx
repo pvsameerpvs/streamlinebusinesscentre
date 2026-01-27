@@ -3,6 +3,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Building2,
   Users,
@@ -29,7 +30,7 @@ import {
 } from "lucide-react";
 
 const services = [
-  { label: "Office Space", icon: Building2, href: "/office-space", active: true },
+  { label: "Office Space", icon: Building2, href: "/office-space" },
   { label: "Coworking", icon: Users, href: "/coworking" },
   { label: "Virtual Offices", icon: Monitor, href: "/virtual-offices" },
   { label: "Meeting Spaces", icon: CalendarDays, href: "/meeting-spaces" },
@@ -53,6 +54,7 @@ const services = [
 
 export function ServiceNav() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
 
   const handleScroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -73,24 +75,27 @@ export function ServiceNav() {
           ref={scrollRef}
           className="flex items-center gap-6 overflow-x-auto pb-2 scrollbar-hide"
         >
-          {services.map((service) => (
-            <Link
-              key={service.label}
-              href={service.href}
-              className="group flex min-w-[84px] flex-col items-center gap-2 text-center"
-            >
-              <div className="flex h-9 w-9 items-center justify-center text-[#4b3624] transition-transform duration-300 group-hover:-translate-y-0.5">
-  <service.icon className="h-6 w-6" strokeWidth={2.5} />
-</div>
+          {services.map((service) => {
+            const isActive = pathname === service.href;
+            return (
+              <Link
+                key={service.label}
+                href={service.href}
+                className="group flex min-w-[84px] flex-col items-center gap-2 text-center"
+              >
+                <div className={`flex h-9 w-9 items-center justify-center text-[#4b3624] transition-transform duration-300 group-hover:-translate-y-0.5 ${isActive ? "text-[#d4a574]" : ""}`}>
+                  <service.icon className="h-6 w-6" strokeWidth={2.5} />
+                </div>
 
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-[11px] font-medium leading-tight text-[#4b3624]">
-                  {service.label}
-                </span>
-                {service.active && <div className="h-[2px] w-8 bg-[#d4a574]" />}
-              </div>
-            </Link>
-          ))}
+                <div className="flex flex-col items-center gap-1">
+                  <span className={`text-[11px] font-medium leading-tight text-[#4b3624] ${isActive ? "text-[#d4a574]" : ""}`}>
+                    {service.label}
+                  </span>
+                  {isActive && <div className="h-[2px] w-8 bg-[#d4a574]" />}
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Left arrow */}
