@@ -11,7 +11,8 @@ import {
   CheckCircle2,
   ArrowRight,
   Maximize2,
-  Brush
+  Brush,
+  ShieldCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
