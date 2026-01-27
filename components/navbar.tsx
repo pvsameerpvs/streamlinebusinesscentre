@@ -13,11 +13,15 @@ import {
   X, 
   ArrowLeft,
   User,
+  Users,
   Building2,
   Monitor,
   Presentation,
   IdCard,
-  CalendarDays
+  CalendarDays,
+  MapPin,
+  SlidersHorizontal,
+  Clock
 } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
@@ -29,7 +33,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
-  const [menuView, setMenuView] = useState<"main" | "get-started">("main");
+  const [menuView, setMenuView] = useState<"main" | "get-started" | "products">("main");
 
   const getStartedItems = [
     { label: "Talk to an expert", icon: User, href: "/contact" },
@@ -38,6 +42,20 @@ export function Navbar() {
     { label: "Book a meeting room", icon: Presentation, href: "/meeting-spaces" },
     { label: "Buy a Membership", icon: IdCard, href: "/membership" },
     { label: "Book a day office", icon: CalendarDays, href: "/day-offices" },
+  ];
+
+  const productItems = [
+    { label: "Office Space", icon: Building2, href: "/office-space" },
+    { label: "Coworking", icon: Users, href: "/coworking" },
+    { label: "Virtual Offices", icon: Monitor, href: "/virtual-offices" },
+    { label: "Meeting rooms", icon: Presentation, href: "/meeting-spaces" },
+    { label: "Membership", icon: IdCard, href: "/membership" },
+    { label: "Business Address", icon: MapPin, href: "/business-address" },
+    { label: "Telephone answering", icon: Phone, href: "/reception-services" },
+    { label: "Event space", icon: CalendarDays, href: "/events" },
+    { label: "Private offices", icon: Building2, href: "/private-offices" },
+    { label: "Custom Offices", icon: SlidersHorizontal, href: "/custom-offices" },
+    { label: "Day Offices", icon: Clock, href: "/day-offices" },
   ];
 
   return (
@@ -153,8 +171,14 @@ export function Navbar() {
                         <span>Get Started</span>
                         <ChevronRight className="h-4 w-4 text-gray-400" />
                       </button>
+                      <button
+                        onClick={() => setMenuView("products")}
+                        className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-base font-medium text-[#1f1f1f] hover:bg-gray-50 transition-colors"
+                      >
+                        <span>Products</span>
+                        <ChevronRight className="h-4 w-4 text-gray-400" />
+                      </button>
                       {[
-                        { label: "Products", href: "/products" },
                         { label: "Discover Streamline", href: "/discover" },
                         { label: "Help", href: "/help" },
                       ].map((item) => (
@@ -215,7 +239,7 @@ export function Navbar() {
                     </div>
                   </div>
                 </>
-              ) : (
+              ) : menuView === "get-started" ? (
                 <div className="flex flex-col h-full bg-white">
                   {/* Header for Get Started */}
                   <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
@@ -238,6 +262,46 @@ export function Navbar() {
                     
                     <div className="space-y-6">
                       {getStartedItems.map((item) => (
+                        <SheetClose asChild key={item.label}>
+                          <Link 
+                            href={item.href}
+                            className="flex items-center gap-6 group py-2"
+                          >
+                            <div className="w-10 h-10 flex items-center justify-center text-[#454545] transition-colors group-hover:text-[#bf9445]">
+                              <item.icon className="h-8 w-8" strokeWidth={1.5} />
+                            </div>
+                            <span className="text-xl font-medium text-[#454545] group-hover:text-black transition-colors">
+                              {item.label}
+                            </span>
+                          </Link>
+                        </SheetClose>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-col h-full bg-white">
+                  {/* Header for Products */}
+                  <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
+                    <button 
+                      onClick={() => setMenuView("main")}
+                      className="flex items-center gap-2 text-gray-600 hover:text-black transition-colors group"
+                    >
+                      <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+                      <span className="text-lg font-medium">Go back</span>
+                    </button>
+                    <SheetClose asChild>
+                      <button className="h-10 w-10 flex items-center justify-center rounded-full hover:bg-gray-100">
+                        <X className="h-6 w-6 text-gray-400" />
+                      </button>
+                    </SheetClose>
+                  </div>
+
+                  <div className="px-6 py-8">
+                    <h2 className="text-4xl font-bold text-[#454545] mb-10 tracking-tight">Products</h2>
+                    
+                    <div className="space-y-6">
+                      {productItems.map((item) => (
                         <SheetClose asChild key={item.label}>
                           <Link 
                             href={item.href}
