@@ -1,161 +1,90 @@
-// components/home/customer-hero-section.tsx
 "use client";
 
-import {
-  CalendarDays,
-  Users,
-  Laptop,
-  IdCard,
-  Building2,
-  Briefcase,
-  Handshake,
-  SlidersHorizontal,
-} from "lucide-react";
-
-const features = [
-  {
-    icon: CalendarDays,
-    label: "Event Space",
-    description: "Host professional events and presentations",
-  },
-  {
-    icon: Users,
-    label: "Coworking",
-    description: "Including some of the most successful entrepreneurs.",
-  },
-  {
-    icon: Laptop,
-    label: "Virtual Offices",
-    description: "Professional address and business support",
-  },
-  {
-    icon: IdCard,
-    label: "Membership",
-    description: "Flexible access to premium workspaces",
-  },
-  {
-    icon: Building2,
-    label: "Private Offices",
-    description: "Secure dedicated workspace solutions",
-  },
-  {
-    icon: Briefcase,
-    label: "Office Space",
-    description: "Customizable professional environments",
-  },
-  {
-    icon: Handshake,
-    label: "Meeting Room",
-    description: "Modern conference and collaboration spaces",
-  },
-  {
-    icon: SlidersHorizontal,
-    label: "Custom Office",
-    description: "Tailored workspace design and solutions",
-  },
-];
+import Image from "next/image";
+import { Apple, PlayCircle, MapPin, Globe, CreditCard, Building2, Users, CalendarDays, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function CustomerHeroSection() {
   return (
-    <section className="bg-[#fff8ef] py-24">
-      <div className="container">
-        {/* Top heading + description */}
-        <div className="mb-12 flex flex-col gap-10 md:flex-row md:items-start">
-          <div className="md:w-1/2">
-            <h2 className="text-xl font-serif leading-tight text-[#1f1a16] md:text-6xl">
-              Make the customer the hero
-              <br />
-              of your story.
-            </h2>
-          </div>
+    <section className="relative bg-[#fff8ef] py-20 md:py-32 overflow-hidden">
+      {/* Background Decorative Accent */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#fdf5ea] -skew-x-12 translate-x-1/2 z-0 hidden lg:block" />
 
-          <div className="md:w-1/2">
-            <div className="flex items-start gap-6">
-              {/* Vertical accent line */}
-              <span className="mt-1 h-16 w-[2px] bg-[#bf9445]" />
-              <p className="text-base leading-relaxed text-[#3b3b3b]">
-                We&apos;re the world&apos;s largest provider of flexible workplace
-                solutions, with customers including some of the most successful
-                entrepreneurs.
-              </p>
+      <div className="container relative z-10 px-4">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Text Content Block */}
+          <div className="space-y-10 order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#bf9445]/20 bg-white text-[#bf9445] text-xs font-bold uppercase tracking-[0.2em] shadow-sm">
+              <Globe className="w-4 h-4" />
+              <span>Global Workspace Network</span>
+            </div>
+
+            <h2 className="text-4xl md:text-7xl font-serif leading-[1.1] text-[#1f1a16] tracking-tight">
+              Work wherever <br className="hidden md:block" /> business takes you.
+            </h2>
+
+            <div className="flex gap-8 items-start">
+              <span className="h-24 w-[3px] bg-[#bf9445] flex-shrink-0 mt-2 rounded-full" />
+              <div className="space-y-8">
+                <p className="text-xl md:text-2xl text-[#3b3b3b] font-medium leading-relaxed">
+                  With over 4,000 locations globally we have offices, coworking spaces and meeting rooms in every major town, city, and transport hub.
+                </p>
+                <p className="text-lg text-[#3b3b3b]/70 leading-relaxed max-w-xl">
+                  Whether you work alone, you&apos;re growing a start-up or you&apos;re running the world&apos;s most successful corporation our network makes it possible to work near clients, colleagues or family.
+                </p>
+              </div>
+            </div>
+
+            {/* App Promotion Section */}
+            
+            
+            <div className="flex justify-start">
+               <button className="rounded-full bg-[#5d4634] px-12 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-2xl hover:bg-[#463226] transition-all hover:scale-105 active:scale-95">
+                Talk To An Expert
+              </button>
             </div>
           </div>
-        </div>
 
-        {/* Feature grid */}
-        <div className="overflow-hidden rounded-sm border border-[#e4d7c6] bg-[#fff8ef]">
-          <div className="grid grid-cols-1 divide-y divide-[#e4d7c6] md:grid-cols-4 md:divide-y-0">
-            {/* first row (0–3) */}
-            {features.slice(0, 4).map((item, index) => (
-              <div
-                key={item.label}
-                className={`group flex h-64 flex-col items-center justify-center bg-[#fdf5ea] transition-colors duration-300 hover:bg-[#594d46] ${
-                  index !== 3
-                    ? "border-b border-[#e4d7c6] md:border-b-0 md:border-r"
-                    : ""
-                }`}
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <item.icon
-                    className="h-16 w-16 text-[#222222] transition-colors duration-300 group-hover:text-white"
-                    strokeWidth={1.6}
-                  />
-                  <p className="text-lg font-medium text-[#222222] transition-colors duration-300 group-hover:text-white">
-                    {item.label}
-                  </p>
-                  {/* sub text only visible on hover */}
-                  <p
-                    className="
-                      max-w-xs text-sm leading-snug text-white
-                      opacity-0 translate-y-1
-                      transition-all duration-300
-                      group-hover:opacity-100 group-hover:translate-y-0
-                    "
-                  >
-                    {item.description}
-                  </p>
+          {/* Visual Showcase Block */}
+          <div className="relative order-1 lg:order-2">
+            <div className="relative aspect-[4/5] md:aspect-square rounded-[4rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] border-[12px] border-white group">
+              <Image
+                src="/global_workspace_hero.png"
+                alt="Premium Global Office Network"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                priority
+              />
+              {/* Floating Overlay Info Card */}
+              <div className="absolute bottom-10 left-10 right-10 bg-white/95 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-2xl border border-[#bf9445]/20 transform transition-transform duration-500 hover:translate-y-[-10px]">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-5xl font-black text-[#1f1a16] tracking-tighter">4,000+</div>
+                  <div className="w-14 h-14 bg-[#bf9445] rounded-full flex items-center justify-center text-white shadow-xl">
+                    <MapPin className="w-7 h-7" />
+                  </div>
                 </div>
+                <h4 className="text-sm font-black text-[#bf9445] uppercase tracking-[0.3em] mb-2">Global Locations</h4>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Every major town, city, and transport hub worldwide. 
+                  Experience the ultimate freedom to grow.
+                </p>
               </div>
-            ))}
+            </div>
 
-            {/* second row (4–7) */}
-            {features.slice(4).map((item, index) => (
-              <div
-                key={item.label}
-                className={`group flex h-64 flex-col items-center justify-center bg-[#fdf5ea] transition-colors duration-300 hover:bg-[#594d46] ${
-                  index !== 3 ? "md:border-r border-[#e4d7c6]" : ""
-                }`}
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <item.icon
-                    className="h-16 w-16 text-[#222222] transition-colors duration-300 group-hover:text-white"
-                    strokeWidth={1.6}
-                  />
-                  <p className="text-lg font-medium text-[#222222] transition-colors duration-300 group-hover:text-white">
-                    {item.label}
-                  </p>
-                  {/* sub text only visible on hover */}
-                  <p
-                    className="
-                      max-w-xs text-sm leading-snug text-white
-                      opacity-0 translate-y-1
-                      transition-all duration-300
-                      group-hover:opacity-100 group-hover:translate-y-0
-                    "
-                  >
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+            {/* Decorative Background Elements */}
+            <div className="absolute -top-16 -right-16 w-56 h-56 bg-[#bf9445]/15 rounded-full blur-[80px] -z-10 animate-pulse" />
+            <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-[#594d46]/10 rounded-full blur-[100px] -z-10" />
+            
+            {/* Small floating badges */}
+            <div className="absolute -top-5 left-10 bg-white px-6 py-3 rounded-2xl shadow-xl border border-gray-100 hidden md:flex items-center gap-3 animate-bounce shadow-[#d4a574]/10">
+               <Building2 className="w-5 h-5 text-[#d4a574]" />
+               <span className="font-bold text-xs text-[#4b3624]">Modern Offices</span>
+            </div>
+            <div className="absolute top-1/2 -right-4 bg-white px-6 py-3 rounded-2xl shadow-xl border border-gray-100 hidden md:flex items-center gap-3 animate-pulse shadow-[#d4a574]/10">
+               <Users className="w-5 h-5 text-[#d4a574]" />
+               <span className="font-bold text-xs text-[#4b3624]">Global Community</span>
+            </div>
           </div>
-        </div>
-
-        {/* CTA button */}
-        <div className="mt-10 flex justify-end">
-          <button className="rounded-full bg-[#5d4634] px-10 py-3 text-sm font-medium text-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] hover:bg-[#463226]">
-            Talk To An Expert
-          </button>
         </div>
       </div>
     </section>
