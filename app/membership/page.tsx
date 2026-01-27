@@ -47,7 +47,7 @@ export default function MembershipPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center">
                 <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                  Buy now
+                  Enquire now
                 </Button>
                 <div className="flex flex-col items-center sm:items-start text-sm">
                   <span className="text-gray-300">Speak with our team at</span>
@@ -158,7 +158,7 @@ export default function MembershipPage() {
                 ))}
               </div>
               <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-12 h-16 shadow-xl">
-                Buy now
+                Enquire now
               </Button>
             </div>
             <div className="lg:col-span-7 relative">

@@ -39,7 +39,7 @@ export default function DedicatedDesksPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                Buy now
+                Enquire now
               </Button>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Reserved exclusively for you</span>

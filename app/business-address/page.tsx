@@ -49,7 +49,7 @@ export default function BusinessAddressPage() {
                     Find a location
                   </Button>
                   <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-md border-white text-white hover:bg-white/20 px-8 py-6 rounded-full">
-                    Buy now
+                    Enquire now
                   </Button>
                </div>
               <div className="flex flex-col items-center sm:items-start text-sm mt-4 sm:mt-0 sm:ml-6">

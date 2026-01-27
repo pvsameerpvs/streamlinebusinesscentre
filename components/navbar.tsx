@@ -39,9 +39,9 @@ export function Navbar() {
   const getStartedItems = [
     { label: "Talk to an expert", icon: User, href: "/contact" },
     { label: "Find an Office Space", icon: Building2, href: "/office-space" },
-    { label: "Buy a virtual office", icon: Monitor, href: "/virtual-offices" },
+    { label: "Enquire about virtual office", icon: Monitor, href: "/virtual-offices" },
     { label: "Book a meeting room", icon: Presentation, href: "/meeting-spaces" },
-    { label: "Buy a Membership", icon: IdCard, href: "/membership" },
+    { label: "Enquire about Membership", icon: IdCard, href: "/membership" },
     { label: "Book a day office", icon: CalendarDays, href: "/day-offices" },
   ];
 

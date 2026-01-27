@@ -199,7 +199,7 @@ export default function CoworkingPage() {
                 <li className="flex items-center gap-2">• Hot desk as often as you need</li>
               </ul>
               <div className="flex flex-col gap-3">
-                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Buy now</Button>
+                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
                 <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>

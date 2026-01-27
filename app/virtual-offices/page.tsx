@@ -46,7 +46,7 @@ export default function VirtualOfficesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Buy now
+                Enquire now
               </Button>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team on</span>
@@ -110,7 +110,7 @@ export default function VirtualOfficesPage() {
                 <li className="flex items-center gap-2">• 4,000+ locations worldwide</li>
               </ul>
               <div className="flex flex-col gap-3">
-                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Buy now</Button>
+                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
                 <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function VirtualOfficesPage() {
                 <li className="flex items-center gap-2">• Access to global network</li>
               </ul>
               <div className="flex flex-col gap-3">
-                <Button className="w-full bg-[#d4a574] text-white rounded-xl">Buy now</Button>
+                <Button className="w-full bg-[#d4a574] text-white rounded-xl">Enquire now</Button>
                 <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function VirtualOfficesPage() {
                 <li className="flex items-center gap-2">• 5 days private office space/mo</li>
               </ul>
               <div className="flex flex-col gap-3">
-                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Buy now</Button>
+                <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
                 <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
               </div>
             </div>
