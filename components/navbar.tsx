@@ -83,7 +83,7 @@ export function Navbar() {
         </Link>
 
         {/* Search Bar (desktop only) */}
-        <div className="hidden max-w-md flex-1 md:block">
+        {/* <div className="hidden max-w-md flex-1 md:block">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
@@ -92,7 +92,7 @@ export function Navbar() {
               className="h-10 rounded-full border-gray-200 bg-white pl-10 shadow-sm focus-visible:ring-1 focus-visible:ring-[#4b3624]"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Actions */}
         <div className="flex items-center gap-2">
