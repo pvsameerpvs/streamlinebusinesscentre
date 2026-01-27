@@ -14,12 +14,10 @@ import {
   Briefcase
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ServiceNav } from "@/components/service-nav";
 
 export default function BusinessLoungePage() {
   return (
     <div className="bg-white min-h-screen">
-      <ServiceNav />
 
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/footer";
+import { ServiceNav } from "@/components/service-nav";
 import N8nChat from "@/components/N8nChat";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-background text-foreground">
         <Navbar />
+        <ServiceNav />
         <main>{children}</main>
         <SiteFooter />
 

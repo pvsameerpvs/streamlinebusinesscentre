@@ -1,5 +1,4 @@
 // app/page.tsx
-import { ServiceNav } from "@/components/service-nav";
 import { HeroSection } from "@/components/home/hero-section";
 import { WhatSetsUsApartSection } from "@/components/home/what-sets-us-apart-section";
 import { CommunityHighlightSection } from "@/components/home/community-highlight-section";
@@ -12,7 +11,6 @@ export default function HomePage() {
   return (
    <div className="bg-background w-full max-w-full overflow-x-hidden">
       {/* Service Navigation */}
-      <ServiceNav />
 
       {/* Hero + floating search */}
       <HeroSection />
