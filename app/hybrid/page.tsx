@@ -118,9 +118,11 @@ export default function HybridPage() {
                   </div>
                 ))}
               </div>
-              <Button className="h-14 px-8 rounded-full bg-[#4b3624] hover:bg-[#594d46] text-white font-bold group">
-                Download Strategy Guide <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact">
+                <Button className="h-14 px-8 rounded-full bg-[#4b3624] hover:bg-[#594d46] text-white font-bold group">
+                  Download Strategy Guide <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="relative">
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#d4a574]/10 rounded-full blur-3xl" />

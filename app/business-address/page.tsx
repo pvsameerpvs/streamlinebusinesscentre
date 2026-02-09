@@ -91,9 +91,11 @@ export default function BusinessAddressPage() {
                  <li>• Use on websites & stationery</li>
                  <li>• Thousands of locations</li>
               </ul>
-              <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Button>
+              <Link href="/business-address">
+                <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Button>
+              </Link>
             </div>
 
             {/* Telephone Answering */}
@@ -109,9 +111,11 @@ export default function BusinessAddressPage() {
                  <li>• Messages taken & forwarded</li>
                  <li>• Professional receptionists</li>
               </ul>
-              <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Button>
+              <Link href="/reception-services">
+                <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Button>
+              </Link>
             </div>
 
             {/* Virtual Office */}
@@ -130,9 +134,11 @@ export default function BusinessAddressPage() {
                  <li>• Full virtual support</li>
                  <li>• Business lounge access</li>
               </ul>
-              <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Button>
+              <Link href="/virtual-offices">
+                <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Button>
+              </Link>
             </div>
 
             {/* Virtual Office Plus */}
@@ -148,9 +154,11 @@ export default function BusinessAddressPage() {
                  <li>• All benefits included</li>
                  <li>• 5 days office access</li>
               </ul>
-              <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Button>
+              <Link href="/virtual-offices">
+                <Button variant="ghost" className="text-[#d4a574] font-bold p-0 justify-start hover:bg-transparent hover:text-[#4b3624]">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

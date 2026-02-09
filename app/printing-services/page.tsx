@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Printer, 
   Scan, 
@@ -38,9 +39,11 @@ export default function PrintingServicesPage() {
               is equipped with business-grade tech to keep your workflows moving.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Learn more
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
+                  Learn more
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Available instantly for members</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -116,9 +119,11 @@ export default function PrintingServicesPage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
-                 Browse Center Locations <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/locations">
+                <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
+                   Browse Center Locations <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -133,9 +138,11 @@ export default function PrintingServicesPage() {
                Access high-end printing and scanning facilities globally. Join our membership for seamless credits.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-                  Join Membership
-               </Button>
+               <Link href="/membership">
+                 <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                    Join Membership
+                 </Button>
+               </Link>
                <a href="tel:+971505229908" className="bg-white/10 hover:bg-white/20 border border-white/20 px-12 h-16 rounded-full flex items-center justify-center font-bold transition-colors">
                   Contact Us
                </a>

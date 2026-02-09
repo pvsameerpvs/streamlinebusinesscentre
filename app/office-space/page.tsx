@@ -140,7 +140,7 @@ export default function OfficeSpacePage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Request a quote</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/private-offices" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -160,7 +160,7 @@ export default function OfficeSpacePage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Request a quote</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/custom-offices" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -180,7 +180,7 @@ export default function OfficeSpacePage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#d4a574] text-white rounded-xl">Book now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/day-offices" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export default function OfficeSpacePage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/membership" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
           </div>

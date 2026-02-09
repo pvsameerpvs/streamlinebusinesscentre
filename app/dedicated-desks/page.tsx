@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Briefcase, 
   Lock, 
@@ -38,9 +39,11 @@ export default function DedicatedDesksPage() {
               Perfect for individuals and small teams who want a permanent base.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                Enquire now
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
+                  Enquire now
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Reserved exclusively for you</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -125,12 +128,16 @@ export default function DedicatedDesksPage() {
                Connect with a local expert today to find the perfect dedicated desk in your ideal location.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-                  Talk to an expert
-               </Button>
-               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4b3624] rounded-full px-12 h-16 text-lg">
-                  View pricing
-               </Button>
+                <Link href="/contact">
+                   <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                      Talk to an expert
+                   </Button>
+                </Link>
+                <Link href="/contact">
+                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#4b3624] rounded-full px-12 h-16 text-lg">
+                      View pricing
+                   </Button>
+                </Link>
             </div>
          </div>
       </section>

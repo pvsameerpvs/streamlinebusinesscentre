@@ -111,7 +111,7 @@ export default function VirtualOfficesPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
+                <Link href="/business-address" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -134,7 +134,7 @@ export default function VirtualOfficesPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#d4a574] text-white rounded-xl">Enquire now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
+                <Link href="/virtual-offices" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -154,7 +154,7 @@ export default function VirtualOfficesPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
+                <Link href="/virtual-offices" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
           </div>

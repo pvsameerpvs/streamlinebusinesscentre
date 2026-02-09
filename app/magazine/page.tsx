@@ -87,9 +87,11 @@ export default function MagazinePage() {
                   </div>
                   <span className="text-sm font-bold text-[#4b3624]">12 min read</span>
                 </div>
-                <Button variant="ghost" className="text-[#d4a574] font-bold group">
-                  Read More <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </Button>
+                <Link href="/contact">
+                  <Button variant="ghost" className="text-[#d4a574] font-bold group">
+                    Read More <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -104,9 +106,11 @@ export default function MagazinePage() {
               <h2 className="text-3xl font-bold text-[#4b3624] mb-2">Latest Insights</h2>
               <p className="text-gray-500">The most recent updates from our editorial team.</p>
             </div>
-            <Button variant="outline" className="rounded-full border-[#d4a574] text-[#d4a574] hover:bg-[#d4a574] hover:text-white">
-              View All categories
-            </Button>
+            <Link href="/magazine">
+              <Button variant="outline" className="rounded-full border-[#d4a574] text-[#d4a574] hover:bg-[#d4a574] hover:text-white">
+                View All categories
+              </Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">

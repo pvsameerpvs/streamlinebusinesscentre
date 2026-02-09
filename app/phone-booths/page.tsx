@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Phone, 
   ShieldCheck, 
@@ -37,9 +38,11 @@ export default function PhoneBoothsPage() {
               Engineered for silence and comfort in the heart of our vibrant workspaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Learn more
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
+                  Learn more
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Available at all global centers</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -115,9 +118,11 @@ export default function PhoneBoothsPage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
-                 Book a Center <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
+                   Book a Center <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -131,9 +136,11 @@ export default function PhoneBoothsPage() {
                Find your quiet space at any of our global locations. Available to all members and day-pass holders.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-                  Join Membership
-               </Button>
+               <Link href="/membership">
+                 <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                    Join Membership
+                 </Button>
+               </Link>
                <a href="tel:+971505229908" className="bg-white/10 hover:bg-white/20 border border-white/20 px-12 h-16 rounded-full flex items-center justify-center font-bold transition-colors">
                   Enquire now
                </a>

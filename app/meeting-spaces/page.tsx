@@ -120,7 +120,7 @@ export default function MeetingSpacesPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Book now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Enquire now</Link>
+                <Link href="/meeting-spaces" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 

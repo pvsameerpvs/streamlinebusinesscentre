@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Shield, 
   Settings, 
@@ -40,9 +41,11 @@ export default function PrivateOfficesPage() {
               customisable, and ready for you to move in today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Get a Quote
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
+                  Get a Quote
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Talk to our office experts</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -115,9 +118,11 @@ export default function PrivateOfficesPage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="mt-12 bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl">
-                 Enquire today
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="mt-12 bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl">
+                   Enquire today
+                </Button>
+              </Link>
             </div>
             <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
               <Image src="/office-2.jpeg" alt="Private Office Interior" fill className="object-cover" />
@@ -137,9 +142,11 @@ export default function PrivateOfficesPage() {
                <a href="tel:+971505229908" className="text-3xl md:text-4xl font-bold text-[#d4a574] hover:text-white transition-colors">
                   +971 505229908
                </a>
-               <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-                  Talk to an expert
-               </Button>
+                <Link href="/contact">
+                   <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                      Talk to an expert
+                   </Button>
+                </Link>
             </div>
         </div>
       </section>

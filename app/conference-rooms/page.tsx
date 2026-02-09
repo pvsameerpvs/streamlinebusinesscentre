@@ -116,7 +116,7 @@ export default function ConferenceRoomsPage() {
                  </div>
                  <h4 className="text-xl font-bold text-[#4b3624] mb-4">{room.title}</h4>
                  <p className="text-gray-500 text-sm leading-relaxed mb-6">{room.desc}</p>
-                 <Link href="#" className="font-bold text-[#d4a574] hover:underline flex items-center gap-2">
+                 <Link href="/contact" className="font-bold text-[#d4a574] hover:underline flex items-center gap-2">
                     Book this room <ArrowRight className="w-4 h-4" />
                  </Link>
               </div>

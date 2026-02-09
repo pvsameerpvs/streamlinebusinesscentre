@@ -43,10 +43,17 @@ export default function DiscoverPage() {
                   OUR STORY
                 </Button>
               </Link>
-              <button className="flex items-center gap-4 text-white font-bold group">
-                <PlayCircle className="w-16 h-16 text-[#d4a574] group-hover:scale-110 transition-transform" />
-                <span className="text-xl tracking-wide uppercase">Watch Vision</span>
-              </button>
+              <Link href="/magazine">
+                <Button variant="outline" className="rounded-full border-[#d4a574] text-[#d4a574] hover:bg-[#d4a574] hover:text-white h-20 px-12 text-xl font-black shadow-2xl transition-all hover:scale-105">
+                  VIEW ALL CATEGORIES
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="ghost" className="flex items-center gap-4 text-white font-bold group h-20 px-12 text-xl shadow-2xl transition-all hover:scale-105">
+                  <PlayCircle className="w-16 h-16 text-[#d4a574] group-hover:scale-110 transition-transform" />
+                  <span className="text-xl tracking-wide uppercase">WATCH VISION</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -61,7 +68,7 @@ export default function DiscoverPage() {
               { title: "Products", desc: "Find the perfect workspace solution for your team.", href: "/products", icon: Building2 },
               { title: "Magazine", desc: "Read the latest insights from our editorial team.", href: "/magazine", icon: Globe },
               { title: "Hybrid Work", desc: "Learn how we empower distributed workforces.", href: "/hybrid", icon: Users },
-              { title: "Download App", desc: "Manage your office life from your smartphone.", href: "/app", icon: Rocket },
+              { title: "Download App", desc: "Manage your office life from your smartphone.", href: "/contact", icon: Rocket },
               { title: "Get in Touch", desc: "Speak with a workspace consultant today.", href: "/contact", icon: Heart }
             ].map((portal, i) => (
               <Link key={i} href={portal.href} className="group h-full">

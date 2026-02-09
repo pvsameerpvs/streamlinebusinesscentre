@@ -46,9 +46,11 @@ export default function MembershipPage() {
                 Book coworking desks, private offices, or business lounges at centres around the world.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                  Enquire now
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
+                    Enquire now
+                  </Button>
+                </Link>
                 <div className="flex flex-col items-center sm:items-start text-sm">
                   <span className="text-gray-300">Speak with our team at</span>
                   <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -83,9 +85,11 @@ export default function MembershipPage() {
               <p className="text-gray-600 mb-6 flex-grow text-sm">
                 Drop in and work whenever you need a professional place to focus. World's largest network.
               </p>
-              <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
-                Explore Lounge Packages
-              </Button>
+                <Link href="/business-lounge">
+                  <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
+                    Explore Lounge Packages
+                  </Button>
+                </Link>
             </div>
 
             {/* Coworking Access */}
@@ -97,9 +101,11 @@ export default function MembershipPage() {
               <p className="text-gray-600 mb-6 flex-grow text-sm">
                 Work alongside a vibrant community. Entry to thousands of inspiring coworking spaces.
               </p>
-              <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
-                Explore Coworking Packages
-              </Button>
+                <Link href="/coworking">
+                  <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
+                    Explore Coworking Packages
+                  </Button>
+                </Link>
             </div>
 
             {/* Office Access */}
@@ -111,9 +117,11 @@ export default function MembershipPage() {
               <p className="text-gray-600 mb-6 flex-grow text-sm">
                 Private workspace on demand. Fully equipped offices available when you need privacy.
               </p>
-              <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
-                Explore Office Packages
-              </Button>
+                <Link href="/office-space">
+                  <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">
+                    Explore Office Packages
+                  </Button>
+                </Link>
             </div>
 
             {/* Enterprise Solutions */}
@@ -125,9 +133,11 @@ export default function MembershipPage() {
               <p className="text-gray-300 mb-6 flex-grow text-sm">
                 Custom-built packages for organizations. Cost-effective access to global workspace network.
               </p>
-              <Button className="w-full bg-[#d4a574] text-white rounded-xl hover:bg-[#c39665]">
-                Talk to an expert
-              </Button>
+                <Link href="/contact">
+                  <Button className="w-full bg-[#d4a574] text-white rounded-xl hover:bg-[#c39665]">
+                    Talk to an expert
+                  </Button>
+                </Link>
             </div>
           </div>
         </div>
@@ -157,9 +167,11 @@ export default function MembershipPage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-12 h-16 shadow-xl">
-                Enquire now
-              </Button>
+               <Link href="/contact">
+                 <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-12 h-16 shadow-xl">
+                   Enquire now
+                 </Button>
+               </Link>
             </div>
             <div className="lg:col-span-7 relative">
               <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl skew-y-1">
@@ -232,9 +244,11 @@ export default function MembershipPage() {
                         </div>
                       ))}
                    </div>
-                   <Button size="lg" className="bg-white text-[#4b3624] hover:bg-gray-100 rounded-2xl px-10 h-16 font-bold shadow-2xl flex gap-3">
-                     <Download className="w-5 h-5" /> Download the app
-                   </Button>
+                    <Link href="/contact">
+                      <Button size="lg" className="bg-white text-[#4b3624] hover:bg-gray-100 rounded-2xl px-10 h-16 font-bold shadow-2xl flex gap-3">
+                        <Download className="w-5 h-5" /> Download the app
+                      </Button>
+                    </Link>
                 </div>
                 <div className="relative">
                    <div className="relative h-[600px] w-full rounded-t-[3rem] overflow-hidden border-x-[12px] border-t-[12px] border-white/10 shadow-3xl">
@@ -262,9 +276,11 @@ export default function MembershipPage() {
                     Giving teams the freedom to choose where they work leads to better focus, engagement, and performance. 
                     Our Enterprise Packages support hybrid working strategies with expert advice.
                  </p>
-                 <Button className="bg-[#4b3624] text-white rounded-full px-8 py-6 h-14 flex gap-2 group">
-                   Talk to an expert <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                 </Button>
+                  <Link href="/contact">
+                    <Button className="bg-[#4b3624] text-white rounded-full px-8 py-6 h-14 flex gap-2 group">
+                      Talk to an expert <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
               </div>
            </div>
         </div>
@@ -297,12 +313,16 @@ export default function MembershipPage() {
                </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 py-7 text-lg shadow-xl">
-                  Enquire now
-               </Button>
-               <Button size="lg" variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-12 py-7 text-lg">
-                  View All Packages
-               </Button>
+                <Link href="/contact">
+                   <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 py-7 text-lg shadow-xl">
+                      Enquire now
+                   </Button>
+                </Link>
+                <Link href="/contact">
+                   <Button size="lg" variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-12 py-7 text-lg">
+                      View All Packages
+                   </Button>
+                </Link>
             </div>
          </div>
       </section>

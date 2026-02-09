@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Coffee, 
   Wifi, 
@@ -39,9 +40,11 @@ export default function BusinessLoungePage() {
               The perfect place to work between meetings or while travelling.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Learn more
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
+                  Learn more
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Open globally for members</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -108,9 +111,11 @@ export default function BusinessLoungePage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-12 h-16 shadow-xl group">
-                 Explore Membership <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/membership">
+                <Button size="lg" className="bg-[#4b3624] text-white rounded-full px-12 h-16 shadow-xl group">
+                   Explore Membership <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="order-1 lg:order-2 relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
               <Image src="/office-tab1.jpg" alt="Lounge Interior" fill className="object-cover" />
@@ -127,9 +132,11 @@ export default function BusinessLoungePage() {
                Access our global network of business lounges and start working efficiently on the move.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-                  Get Started
-               </Button>
+               <Link href="/contact">
+                 <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                    Get Started
+                 </Button>
+               </Link>
                <a href="tel:+971505229908" className="bg-white/10 hover:bg-white/20 border border-white/20 px-12 h-16 rounded-full flex items-center justify-center font-bold transition-colors">
                   Contact Support
                </a>

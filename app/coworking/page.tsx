@@ -160,7 +160,7 @@ export default function CoworkingPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Get a quote</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/dedicated-desks" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -180,7 +180,7 @@ export default function CoworkingPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#d4a574] text-white rounded-xl">Book now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/hot-desks" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export default function CoworkingPage() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button className="w-full bg-[#4b3624] text-white rounded-xl">Enquire now</Button>
-                <Link href="#" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
+                <Link href="/membership" className="text-center text-[#d4a574] font-medium text-sm hover:underline">Learn more</Link>
               </div>
             </div>
           </div>
@@ -361,9 +361,11 @@ export default function CoworkingPage() {
                    <p className="text-gray-600 mb-8 leading-relaxed">
                       For total freedom, drop into a coworking space and hot desk whenever it suits you. It’s a flexible, cost-effective way to work.
                    </p>
-                   <Button variant="outline" className="border-[#4b3624] text-[#4b3624] w-full py-6 rounded-2xl group">
-                      Explore Hot Desking <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                   </Button>
+                   <Link href="/hot-desks" className="block w-full">
+                     <Button variant="outline" className="border-[#4b3624] text-[#4b3624] w-full py-6 rounded-2xl group">
+                        Explore Hot Desking <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                     </Button>
+                   </Link>
                 </div>
              </div>
 
@@ -380,9 +382,11 @@ export default function CoworkingPage() {
                    <p className="text-gray-600 mb-8 leading-relaxed">
                       Prefer consistency? Choose a dedicated desk in a shared workspace. Secure locker for personal items and all the benefits of coworking.
                    </p>
-                   <Button variant="outline" className="border-[#d4a574] text-[#d4a574] hover:bg-[#d4a574] hover:text-white w-full py-6 rounded-2xl group">
-                      Explore Dedicated Desks <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                   </Button>
+                   <Link href="/dedicated-desks" className="block w-full">
+                     <Button variant="outline" className="border-[#d4a574] text-[#d4a574] hover:bg-[#d4a574] hover:text-white w-full py-6 rounded-2xl group">
+                        Explore Dedicated Desks <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                     </Button>
+                   </Link>
                 </div>
              </div>
           </div>

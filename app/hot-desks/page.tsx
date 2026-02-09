@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Zap, 
   Users, 
@@ -38,9 +39,11 @@ export default function HotDesksPage() {
               and anyone who needs a professional place to focus.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
-                Book a Desk
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full">
+                  Book a Desk
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Available 24/7 at select locations</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -105,9 +108,11 @@ export default function HotDesksPage() {
                  </div>
                ))}
             </div>
-            <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
-               Browse Plans
-            </Button>
+            <Link href="/membership">
+              <Button size="lg" className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 h-16 text-lg">
+                 Browse Plans
+              </Button>
+            </Link>
           </div>
           <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
              <Image src="/office-tab2.png" alt="Coworking Life" fill className="object-cover" />
@@ -123,12 +128,16 @@ export default function HotDesksPage() {
                Download our app or browse locations to find your nearest coworking space today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-               <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 h-16 text-lg shadow-xl">
-                  Find a Center
-               </Button>
-               <Button size="lg" variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-12 h-16 text-lg">
-                  Talk to Us
-               </Button>
+               <Link href="/locations">
+                 <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 h-16 text-lg shadow-xl">
+                    Find a Center
+                 </Button>
+               </Link>
+               <Link href="/contact">
+                 <Button size="lg" variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-12 h-16 text-lg">
+                    Talk to Us
+                 </Button>
+               </Link>
             </div>
          </div>
       </section>

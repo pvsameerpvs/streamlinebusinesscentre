@@ -1,4 +1,5 @@
 // components/home/community-highlight-section.tsx
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -20,9 +21,11 @@ export function CommunityHighlightSection() {
           <p className="text-lg text-[#4b3624]/80">
             Premium office rental space with fully furnished facilities
           </p>
-          <Button className="h-14 rounded-full bg-[#594d46] px-10 text-lg text-white hover:bg-[#4b3624]">
-            Book a tour
-          </Button>
+          <Link href="/contact">
+            <Button className="h-14 rounded-full bg-[#594d46] px-10 text-lg text-white hover:bg-[#4b3624]">
+              Book a tour
+            </Button>
+          </Link>
         </div>
       </div>
 
