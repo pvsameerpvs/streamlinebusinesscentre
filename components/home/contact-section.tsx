@@ -1,4 +1,7 @@
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,8 +14,50 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { services } from "@/lib/services";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+
+const contactSchema = z.object({
+  fullName: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(7, "Phone number must be at least 7 characters"),
+  service: z.string().min(1, "Please select a service"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactValues = z.infer<typeof contactSchema>;
 
 export function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+    reset,
+  } = useForm<ContactValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactValues) => {
+    setIsSubmitting(true);
+    console.log("Contact form data:", data);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setIsSubmitting(false);
+    setSubmitted(true);
+    reset();
+  };
+
   return (
     <section id="contact" className="relative bg-white py-24 lg:py-32 overflow-hidden">
       {/* Decorative Blur Backgrounds */}
@@ -82,71 +127,114 @@ export function ContactSection() {
           {/* Right Side: Contact Form */}
           <div className="relative">
             <div className="bg-[#4b3624] p-8 md:p-12 rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(75,54,36,0.3)] border border-[#5d4634]">
-              <div className="mb-10">
-                <h3 className="text-3xl font-bold text-white mb-3">Get in Touch</h3>
-                <p className="text-white/60 font-medium">Complete the form below and we&apos;ll get back to you within 24 hours.</p>
-              </div>
-
-              <form className="space-y-6">
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Full Name</label>
-                  <Input 
-                    placeholder="Enter your name"
-                    className="h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 transition-all" 
-                  />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Email Address</label>
-                    <Input 
-                      type="email"
-                      placeholder="email@example.com"
-                      className="h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10" 
-                    />
+              {submitted ? (
+                <div className="text-center space-y-6 py-12 animate-in fade-in zoom-in duration-500">
+                  <div className="w-20 h-20 bg-[#d4a574] rounded-full flex items-center justify-center mx-auto shadow-xl">
+                    <CheckCircle2 className="w-10 h-10 text-[#4b3624]" />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Phone Number</label>
-                    <Input 
-                      placeholder="+971"
-                      className="h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10" 
-                    />
+                  <h3 className="text-3xl font-bold text-white">Enquiry Sent!</h3>
+                  <p className="text-white/60 font-medium">
+                    Thank you for reaching out. Our team will get back to you within 24 hours.
+                  </p>
+                  <Button 
+                    onClick={() => setSubmitted(false)}
+                    className="mt-6 bg-[#d4a574] text-[#4b3624] hover:bg-[#c49564] font-bold rounded-2xl"
+                  >
+                    Send another enquiry
+                  </Button>
+                </div>
+              ) : (
+                <>
+                  <div className="mb-10">
+                    <h3 className="text-3xl font-bold text-white mb-3">Get in Touch</h3>
+                    <p className="text-white/60 font-medium">Complete the form below and we&apos;ll get back to you within 24 hours.</p>
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Service of Interest</label>
-                  <Select>
-                    <SelectTrigger className="h-14 bg-white/5 border-white/10 text-white rounded-2xl focus:ring-0">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-[#4b3624] border-[#5d4634] text-white">
-                      {services.map((service) => (
-                        <SelectItem key={service.slug} value={service.slug} className="focus:bg-[#d4a574] focus:text-white">
-                          {service.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Full Name</label>
+                      <Input 
+                        {...register("fullName")}
+                        placeholder="Enter your name"
+                        className={`h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 transition-all ${errors.fullName ? "border-red-500" : ""}`} 
+                      />
+                      {errors.fullName && <p className="text-xs text-red-400">{errors.fullName.message}</p>}
+                    </div>
 
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Message</label>
-                  <Textarea 
-                    placeholder="Tell us about your requirements"
-                    className="min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 transition-all resize-none" 
-                  />
-                </div>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Email Address</label>
+                        <Input 
+                          {...register("email")}
+                          type="email"
+                          placeholder="email@example.com"
+                          className={`h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 ${errors.email ? "border-red-500" : ""}`} 
+                        />
+                        {errors.email && <p className="text-xs text-red-400">{errors.email.message}</p>}
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Phone Number</label>
+                        <Input 
+                          {...register("phone")}
+                          placeholder="+971"
+                          className={`h-14 bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 ${errors.phone ? "border-red-500" : ""}`} 
+                        />
+                        {errors.phone && <p className="text-xs text-red-400">{errors.phone.message}</p>}
+                      </div>
+                    </div>
 
-                <Button className="w-full h-16 bg-[#d4a574] hover:bg-[#c49564] text-[#4b3624] font-black uppercase tracking-[0.2em] rounded-2xl shadow-xl transition-all hover:scale-[1.02] active:scale-95 flex gap-3">
-                  <Send className="w-5 h-5" />
-                  Send Enquiry
-                </Button>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Service of Interest</label>
+                      <Controller
+                        name="service"
+                        control={control}
+                        render={({ field }) => (
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <SelectTrigger className={`h-14 bg-white/5 border-white/10 text-white rounded-2xl focus:ring-0 ${errors.service ? "border-red-500" : ""}`}>
+                              <SelectValue placeholder="Select a service" />
+                            </SelectTrigger>
+                            <SelectContent className="bg-[#4b3624] border-[#5d4634] text-white">
+                              {services.map((service) => (
+                                <SelectItem key={service.slug} value={service.slug} className="focus:bg-[#d4a574] focus:text-white">
+                                  {service.name}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                        )}
+                      />
+                      {errors.service && <p className="text-xs text-red-400">{errors.service.message}</p>}
+                    </div>
 
-                <p className="text-center text-[10px] text-white/40 uppercase tracking-widest leading-loose mt-8">
-                  By submitting you agree to our terms and privacy policy regarding communications.
-                </p>
-              </form>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-[#d4a574]">Message</label>
+                      <Textarea 
+                        {...register("message")}
+                        placeholder="Tell us about your requirements"
+                        className={`min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-2xl focus:bg-white/10 focus:border-[#d4a574]/50 transition-all resize-none ${errors.message ? "border-red-500" : ""}`} 
+                      />
+                      {errors.message && <p className="text-xs text-red-400">{errors.message.message}</p>}
+                    </div>
+
+                    <Button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full h-16 bg-[#d4a574] hover:bg-[#c49564] text-[#4b3624] font-black uppercase tracking-[0.2em] rounded-2xl shadow-xl transition-all hover:scale-[1.02] active:scale-95 flex gap-3"
+                    >
+                      {isSubmitting ? "Sending..." : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          Send Enquiry
+                        </>
+                      )}
+                    </Button>
+
+                    <p className="text-center text-[10px] text-white/40 uppercase tracking-widest leading-loose mt-8">
+                      By submitting you agree to our terms and privacy policy regarding communications.
+                    </p>
+                  </form>
+                </>
+              )}
             </div>
 
             {/* Floating Decorative Card */}
@@ -166,3 +254,4 @@ export function ContactSection() {
     </section>
   );
 }
+

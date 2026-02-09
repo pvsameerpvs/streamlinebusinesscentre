@@ -16,19 +16,50 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+
+const contactFormSchema = z.object({
+  fullName: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(7, "Phone number must be at least 7 characters"),
+  companyName: z.string().optional(),
+  service: z.string().min(1, "Please select a service"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      companyName: "",
+      service: "Office Space",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
+    console.log("Form data:", data);
     // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1500);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setIsSubmitting(false);
+    setSubmitted(true);
+    reset();
   };
 
   return (
@@ -68,24 +99,26 @@ export default function ContactPage() {
               </div>
 
               {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Full Name</label>
                       <Input 
-                        required 
+                        {...register("fullName")}
                         placeholder="John Doe" 
-                        className="h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574]" 
+                        className={`h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574] ${errors.fullName ? "border-red-500" : ""}`} 
                       />
+                      {errors.fullName && <p className="text-xs text-red-500">{errors.fullName.message}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Email Address</label>
                       <Input 
-                        required 
+                        {...register("email")}
                         type="email" 
                         placeholder="john@example.com" 
-                        className="h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574]" 
+                        className={`h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574] ${errors.email ? "border-red-500" : ""}`} 
                       />
+                      {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
                     </div>
                   </div>
 
@@ -93,14 +126,16 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Phone Number</label>
                       <Input 
-                        required 
+                        {...register("phone")}
                         placeholder="+971 5X XXX XXXX" 
-                        className="h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574]" 
+                        className={`h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574] ${errors.phone ? "border-red-500" : ""}`} 
                       />
+                      {errors.phone && <p className="text-xs text-red-500">{errors.phone.message}</p>}
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Company Name</label>
                       <Input 
+                        {...register("companyName")}
                         placeholder="Your Company" 
                         className="h-14 rounded-xl border-gray-200 focus-visible:ring-[#d4a574]" 
                       />
@@ -109,25 +144,31 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Service of Interest</label>
-                    <select className="flex h-14 w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4a574] disabled:cursor-not-allowed disabled:opacity-50">
-                      <option>Office Space</option>
-                      <option>Coworking</option>
-                      <option>Virtual Office</option>
-                      <option>Meeting Rooms</option>
-                      <option>Membership</option>
+                    <select 
+                      {...register("service")}
+                      className={`flex h-14 w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4a574] disabled:cursor-not-allowed disabled:opacity-50 ${errors.service ? "border-red-500" : ""}`}
+                    >
+                      <option value="Office Space">Office Space</option>
+                      <option value="Coworking">Coworking</option>
+                      <option value="Virtual Office">Virtual Office</option>
+                      <option value="Meeting Rooms">Meeting Rooms</option>
+                      <option value="Membership">Membership</option>
                     </select>
+                    {errors.service && <p className="text-xs text-red-500">{errors.service.message}</p>}
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-[#4b3624] uppercase tracking-wider">Your Message</label>
                     <Textarea 
-                      required 
+                      {...register("message")}
                       placeholder="How can we help you?" 
-                      className="min-h-[150px] rounded-xl border-gray-200 focus-visible:ring-[#d4a574]" 
+                      className={`min-h-[150px] rounded-xl border-gray-200 focus-visible:ring-[#d4a574] ${errors.message ? "border-red-500" : ""}`} 
                     />
+                    {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
                   </div>
 
                   <Button 
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full h-16 bg-[#d4a574] hover:bg-[#b08963] text-white text-lg font-bold rounded-xl shadow-xl transition-all hover:-translate-y-1"
                   >
