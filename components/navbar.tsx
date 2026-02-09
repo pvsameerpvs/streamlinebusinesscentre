@@ -122,13 +122,14 @@ export function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button
-            variant="default"
-            className="hidden h-10 rounded-full bg-[#594d46] px-6 text-sm text-white hover:bg-[#4b3624] md:flex"
-            onClick={() => setMenuView("get-started")}
-          >
-            Contact Us
-          </Button>
+          <Link href="/contact">
+            <Button
+              variant="default"
+              className="hidden h-10 rounded-full bg-[#594d46] px-6 text-sm text-white hover:bg-[#4b3624] md:flex"
+            >
+              Contact Us
+            </Button>
+          </Link>
 
           {/* Menu + Sidebar */}
           <Sheet onOpenChange={(open: boolean) => !open && setMenuView("main")}>

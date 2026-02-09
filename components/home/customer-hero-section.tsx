@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Apple, PlayCircle, MapPin, Globe, CreditCard, Building2, Users, CalendarDays, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,9 +40,11 @@ export function CustomerHeroSection() {
             
             
             <div className="flex justify-start">
-               <button className="rounded-full bg-[#5d4634] px-12 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-2xl hover:bg-[#463226] transition-all hover:scale-105 active:scale-95">
-                Talk To An Expert
-              </button>
+              <Link href="/contact">
+                <button className="rounded-full bg-[#5d4634] px-12 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-2xl hover:bg-[#463226] transition-all hover:scale-105 active:scale-95">
+                  Talk To An Expert
+                </button>
+              </Link>
             </div>
           </div>
 
