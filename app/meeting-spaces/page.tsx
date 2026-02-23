@@ -202,8 +202,10 @@ export default function MeetingSpacesPage() {
                     <span>Global recommendations</span>
                   </div>
                 </div>
-                <Button size="lg" className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full">
-                  Talk to an expert
+                <Button asChild size="lg" className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full shadow-lg transition-transform active:scale-95">
+                  <a href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank" rel="noopener noreferrer">
+                    Book a Sales Meeting
+                  </a>
                 </Button>
               </div>
               <div className="relative w-full max-w-sm aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 group-hover:scale-[1.02] transition-transform duration-500">

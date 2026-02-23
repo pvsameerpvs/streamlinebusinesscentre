@@ -11,7 +11,8 @@ import {
   Send,
   CheckCircle2,
   Globe,
-  Headset
+  Headset,
+  CalendarDays
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -261,8 +262,25 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Calendly Booking Card */}
+              <div className="bg-[#4b3624] p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4a574]/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-[#d4a574]/20 transition-all duration-500" />
+                <h3 className="text-2xl font-bold mb-4 relative z-10">Prefer a Direct Call?</h3>
+                <p className="text-gray-300 text-sm mb-8 leading-relaxed relative z-10">
+                  Schedule a 30-minute sales meeting directly with our team at your convenience.
+                </p>
+                <Button 
+                  asChild
+                  className="w-full h-14 bg-[#d4a574] hover:bg-[#b08963] text-[#4b3624] font-bold rounded-xl shadow-lg relative z-10 transition-transform active:scale-95"
+                >
+                  <a href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank" rel="noopener noreferrer">
+                    Book a Sales Meeting <CalendarDays className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
+
               {/* Map Placeholder/CTA */}
-              <div className="relative h-[300px] rounded-[2.5rem] overflow-hidden group shadow-2xl">
+              <div className="relative h-[250px] rounded-[2.5rem] overflow-hidden group shadow-2xl">
                 <Image src="/office-1.jpeg" alt="Our Location" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-[#4b3624]/20 flex items-center justify-center">
                   <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full shadow-2xl border border-white/20">

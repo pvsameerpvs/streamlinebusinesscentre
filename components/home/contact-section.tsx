@@ -77,6 +77,16 @@ export function ContactSection() {
               <p className="text-lg md:text-xl text-gray-500 max-w-xl font-medium leading-relaxed">
                 Our experts are ready to help you find the perfect solution for your business. Reach out today for a personalized consultation.
               </p>
+              <div className="pt-4">
+                <Button 
+                  asChild
+                  className="h-14 px-8 bg-[#d4a574] hover:bg-[#b08963] text-[#4b3624] font-bold rounded-2xl shadow-lg transition-transform hover:scale-[1.02] active:scale-95 flex items-center gap-3 w-fit"
+                >
+                  <a href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank" rel="noopener noreferrer">
+                    Book a Sales Meeting <Send className="w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Contact Details Grid */}

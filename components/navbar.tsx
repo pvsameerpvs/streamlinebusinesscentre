@@ -37,6 +37,7 @@ export function Navbar() {
   const [menuView, setMenuView] = useState<"main" | "get-started" | "products" | "discover">("main");
 
   const getStartedItems = [
+    { label: "Book a sales meeting", icon: CalendarDays, href: "https://calendly.com/streamlinebusinesscenter-sales/30min", external: true },
     { label: "Talk to an expert", icon: User, href: "/contact" },
     { label: "Find an Office Space", icon: Building2, href: "/office-space" },
     { label: "Enquire about virtual office", icon: Monitor, href: "/virtual-offices" },
@@ -121,6 +122,15 @@ export function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Link href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank">
+            <Button
+              variant="default"
+              className="hidden h-10 rounded-full bg-[#d4a574] px-6 text-sm text-[#4b3624] font-bold hover:bg-[#b08963] md:flex"
+            >
+              Book a Meeting
+            </Button>
+          </Link>
 
           <Link href="/contact">
             <Button
@@ -256,6 +266,7 @@ export function Navbar() {
                         <SheetClose asChild key={item.label}>
                           <Link 
                             href={item.href}
+                            target={item.external ? "_blank" : undefined}
                             className="flex items-center gap-6 group py-2"
                           >
                             <div className="w-10 h-10 flex items-center justify-center text-[#454545] transition-colors group-hover:text-[#bf9445]">

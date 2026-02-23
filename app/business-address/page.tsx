@@ -280,8 +280,10 @@ export default function BusinessAddressPage() {
                        <span>Calls transferred directly to you when needed</span>
                     </div>
                  </div>
-                 <Button variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-8 py-6 h-14 font-bold">
-                    Talk to an expert
+                 <Button asChild variant="outline" className="border-[#4b3624] text-[#4b3624] rounded-full px-8 py-6 h-14 font-bold hover:bg-[#4b3624] hover:text-white transition-all active:scale-95">
+                    <a href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank" rel="noopener noreferrer">
+                      Schedule a Meeting
+                    </a>
                  </Button>
               </div>
               <div className="relative h-[450px] rounded-[3rem] overflow-hidden order-1 md:order-2 shadow-xl">

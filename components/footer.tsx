@@ -42,8 +42,7 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link href="/about" className="hover:text-white">About Us</Link></li>
               <li><Link href="/locations" className="hover:text-white">Locations</Link></li>
-              <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link href="https://calendly.com/streamlinebusinesscenter-sales/30min" target="_blank" className="text-[#d4a574] hover:text-white font-semibold">Book a Meeting</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             </ul>
           </div>
