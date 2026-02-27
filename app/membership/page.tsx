@@ -11,9 +11,7 @@ import {
   Smartphone, 
   CheckCircle2, 
   ArrowRight,
-  Phone,
   MessageSquare,
-  Shield,
   Zap,
   Layout,
   Star,
@@ -83,7 +81,7 @@ export default function MembershipPage() {
               </div>
               <h3 className="text-xl font-bold text-[#4b3624] mb-4">Lounge Access</h3>
               <p className="text-gray-600 mb-6 flex-grow text-sm">
-                Drop in and work whenever you need a professional place to focus. World's largest network.
+                Drop in and work whenever you need a professional place to focus. World&apos;s largest network.
               </p>
                 <Link href="/business-lounge">
                   <Button variant="outline" className="w-full border-[#d4a574] text-[#d4a574] rounded-xl hover:bg-[#d4a574] hover:text-white">

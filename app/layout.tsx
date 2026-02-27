@@ -3,7 +3,6 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/footer";
 import { ServiceNav } from "@/components/service-nav";
-import N8nChat from "@/components/N8nChat";
 
 export const metadata: Metadata = {
   title: "Streamline Business Centre | Office space your way",

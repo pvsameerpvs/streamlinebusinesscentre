@@ -11,8 +11,7 @@ import {
   ArrowRight,
   Monitor,
   Cpu,
-  Zap,
-  Phone
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

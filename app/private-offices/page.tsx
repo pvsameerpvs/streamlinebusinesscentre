@@ -3,15 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Shield, 
   Settings, 
   Maximize, 
   Users, 
   CheckCircle2, 
-  ArrowRight,
-  Phone,
-  MessageSquare,
-  Building2,
   Lock,
   Globe
 } from "lucide-react";

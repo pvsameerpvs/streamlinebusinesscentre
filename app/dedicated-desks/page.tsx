@@ -10,8 +10,7 @@ import {
   Users, 
   Shield, 
   Mail, 
-  Building2,
-  ArrowRight
+  Building2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

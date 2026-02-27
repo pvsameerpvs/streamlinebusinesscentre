@@ -9,18 +9,12 @@ import {
   Globe,
   CheckCircle2,
   ArrowRight,
-  Phone,
-  MessageSquare,
-  Shield,
   Wifi,
   Coffee,
   Calendar,
-  Layout,
   Briefcase,
   Smartphone,
   Zap,
-  Printer,
-  Headset,
   Heart,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";

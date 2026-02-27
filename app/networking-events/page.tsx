@@ -5,12 +5,9 @@ import Link from "next/link";
 import { 
   Wine, 
   Users, 
-  Globe, 
   CheckCircle2, 
   ArrowRight,
   Sparkles,
-  Calendar,
-  MessageSquare,
   Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";

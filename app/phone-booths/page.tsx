@@ -3,12 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Phone, 
   ShieldCheck, 
   Volume2, 
   Zap, 
-  Briefcase, 
-  MessageSquare,
   CheckCircle2,
   ArrowRight
 } from "lucide-react";

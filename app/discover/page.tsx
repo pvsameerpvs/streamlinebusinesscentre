@@ -35,7 +35,7 @@ export default function DiscoverPage() {
               <span className="text-[#d4a574]">Workspace.</span>
             </h1>
             <p className="text-2xl text-gray-300 leading-relaxed max-w-2xl font-medium">
-              We're building the infrastructure for the future of work. Discover how Streamline is transforming the global business landscape.
+              We&apos;re building the infrastructure for the future of work. Discover how Streamline is transforming the global business landscape.
             </p>
             <div className="flex flex-wrap gap-6 pt-4">
               <Link href="/about">

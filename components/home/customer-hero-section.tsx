@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Apple, PlayCircle, MapPin, Globe, CreditCard, Building2, Users, CalendarDays, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MapPin, Globe, Building2, Users } from "lucide-react";
 
 export function CustomerHeroSection() {
   return (

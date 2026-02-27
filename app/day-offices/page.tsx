@@ -3,14 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Briefcase, 
   Clock, 
   Globe, 
   CheckCircle2, 
   ArrowRight,
-  Shield,
   Wifi,
-  Users,
   Settings
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -60,7 +57,7 @@ export default function DayOfficesPage() {
         <div className="container px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#4b3624] mb-8">Professional Privacy, Instantly</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">
-            Whether you're travelling for business or simply need a quiet space to focus for the afternoon, 
+            Whether you&apos;re travelling for business or simply need a quiet space to focus for the afternoon, 
             our day offices provide a fully serviced, professional environment.
           </p>
           

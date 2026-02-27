@@ -4,7 +4,6 @@ import Image from "next/image";
 import { getServiceBySlug, services } from "@/lib/services";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ServiceGallery } from "@/components/service-gallery";
 import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 
@@ -150,8 +149,8 @@ export default function ServicePage({ params }: ServicePageProps) {
            <div className="container">
             <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-12">
                <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Gallery</h2>
-               <p className="mt-4 text-gray-600">
-                    Take a closer look at the environment we've styled for your success.
+                <p className="mt-4 text-gray-600">
+                    Take a closer look at the environment we&apos;ve styled for your success.
                 </p>
             </div>
             <ServiceGallery images={service.images} />
@@ -165,8 +164,8 @@ export default function ServicePage({ params }: ServicePageProps) {
             <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                 Ready to get started?
             </h2>
-             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Please tell us a bit about your requirements and we'll help you find the perfect solution for your business needs.
+              <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              Please tell us a bit about your requirements and we&apos;ll help you find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                  <Button size="lg" className="w-full sm:w-auto rounded-full bg-white text-[#594d46] hover:bg-gray-100 font-semibold text-lg px-8 h-14">

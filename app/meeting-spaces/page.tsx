@@ -8,20 +8,16 @@ import {
   Search, 
   Globe, 
   CheckCircle2, 
-  Video, 
   Monitor, 
   Presentation, 
   Coffee, 
   Wifi, 
   Clock, 
-  ChevronRight,
-  Phone,
   MessageSquare,
   Shield,
   Briefcase,
   Layout,
-  Tv,
-  ArrowRight
+  Tv
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -335,7 +331,7 @@ export default function MeetingSpacesPage() {
                <div className="text-center lg:text-left">
                   <h2 className="text-3xl md:text-5xl font-bold text-[#4b3624] mb-8 leading-tight">Ready When You Are</h2>
                   <p className="text-lg text-gray-600 mb-10">
-                    Our meeting rooms are fully prepared. Book in advance or on the day, and we'll ensure everything is set up for your arrival.
+                    Our meeting rooms are fully prepared. Book in advance or on the day, and we&apos;ll ensure everything is set up for your arrival.
                   </p>
                   <div className="space-y-6">
                     <Link href="/contact">

@@ -51,7 +51,7 @@ export default function RegisterPage() {
           <div className="relative z-10 pt-12">
             <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
               <p className="text-xs italic text-gray-400 leading-relaxed">
-                "Switching our headquarters to Streamline was the best decision for our scaling tech team."
+                &ldquo;Switching our headquarters to Streamline was the best decision for our scaling tech team.&rdquo;
               </p>
               <div className="mt-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-[#d4a574] overflow-hidden">
@@ -135,7 +135,7 @@ export default function RegisterPage() {
             <div className="flex items-start gap-3 py-2">
               <input type="checkbox" className="mt-1 accent-[#d4a574]" id="terms" />
               <label htmlFor="terms" className="text-[10px] text-gray-500 leading-normal">
-                I agree to Streamline's <Link href="/terms" className="text-[#d4a574] font-bold hover:underline">Terms of Service</Link> and <Link href="/privacy" className="text-[#d4a574] font-bold hover:underline">Privacy Policy</Link>.
+                I agree to Streamline&apos;s <Link href="/terms" className="text-[#d4a574] font-bold hover:underline">Terms of Service</Link> and <Link href="/privacy" className="text-[#d4a574] font-bold hover:underline">Privacy Policy</Link>.
               </label>
             </div>
 

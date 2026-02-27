@@ -6,7 +6,6 @@ import {
   Workflow, 
   Zap, 
   Users2, 
-  Laptop2, 
   LineChart,
   ShieldCheck,
   CheckCircle2,
@@ -128,7 +127,7 @@ export default function HybridPage() {
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#d4a574]/10 rounded-full blur-3xl" />
               <div className="bg-[#fbf7f2] rounded-[4rem] p-4 shadow-2xl relative">
                 <div className="relative aspect-square rounded-[3.5rem] overflow-hidden group">
-                  <Image src="/global_workspace_hero.png" alt="Collaborative Office" fill className="object-cover group-hover:scale-105 transition-transform duration-[2s]" />
+                  <Image src="/global_workspace_hero.png" alt="Collaborative Office" fill className="object-cover group-hover:scale-105 transition-transform [transition-duration:2s]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#4b3624]/80 to-transparent flex items-end p-12">
                     <div className="text-white">
                       <div className="flex items-center gap-3 mb-4">
@@ -150,7 +149,7 @@ export default function HybridPage() {
         <div className="container relative z-10 px-4">
           <div className="max-w-2xl mx-auto space-y-10">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Ready to modernise?</h2>
-            <p className="text-xl text-gray-300">Join over 83% of the world's leading companies who have already switched to a hybrid model.</p>
+            <p className="text-xl text-gray-300">Join over 83% of the world&apos;s leading companies who have already switched to a hybrid model.</p>
             <div className="flex justify-center">
               <Link href="/contact">
                 <Button className="h-20 px-12 bg-white hover:bg-[#fbf7f2] text-[#4b3624] font-black rounded-full text-xl shadow-2xl transition-all hover:scale-105">

@@ -8,8 +8,6 @@ import {
   Layout, 
   Lightbulb, 
   Building2,
-  CheckCircle2,
-  ArrowRight,
   Maximize2,
   Brush,
   ShieldCheck

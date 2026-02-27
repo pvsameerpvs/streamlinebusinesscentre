@@ -2,14 +2,11 @@
 
 import Image from "next/image";
 import { 
-  Mail, 
   MapPin, 
   ShieldCheck, 
-  Globe, 
   CheckCircle2, 
   ArrowRight,
   Send,
-  Smartphone,
   ScanText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";

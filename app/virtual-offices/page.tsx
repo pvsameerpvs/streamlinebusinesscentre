@@ -5,18 +5,15 @@ import Link from "next/link";
 import {
   Building2,
   Mail,
-  Phone,
   Search,
   Globe,
   CheckCircle2,
   Monitor,
   MessageSquare,
-  Shield,
   CreditCard,
   Target,
   Users,
   Briefcase,
-  Smartphone,
   Plane,
   Plus,
 } from "lucide-react";

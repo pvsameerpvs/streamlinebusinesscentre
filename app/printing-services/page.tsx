@@ -6,12 +6,9 @@ import {
   Printer, 
   Scan, 
   Copy, 
-  Settings, 
   CheckCircle2, 
   ArrowRight,
-  ShieldCheck,
-  FileText,
-  MousePointer2
+  FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

@@ -82,7 +82,7 @@ export default function LocationsPage() {
                 <span>Dubai Centres</span>
               </div>
               <h2 className="text-4xl font-bold text-[#4b3624]">Prime Dubai Locations</h2>
-              <p className="text-gray-500 max-w-xl">Explore our network of luxury business centres strategically placed in Dubai's most prestigious commercial districts.</p>
+              <p className="text-gray-500 max-w-xl">Explore our network of luxury business centres strategically placed in Dubai&apos;s most prestigious commercial districts.</p>
             </div>
             <Link href="/contact">
               <Button variant="ghost" className="text-[#d4a574] font-bold group">
@@ -95,7 +95,7 @@ export default function LocationsPage() {
             {locations.map((loc, i) => (
               <div key={i} className="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col">
                 <div className="relative h-64 overflow-hidden">
-                  <Image src={loc.image} alt={loc.name} fill className="object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
+                  <Image src={loc.image} alt={loc.name} fill className="object-cover group-hover:scale-110 transition-transform [transition-duration:1.5s]" />
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#d4a574]" />

@@ -3,10 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Bell, 
   Users, 
   Heart, 
-  ShieldCheck, 
   Smartphone, 
   CheckCircle2, 
   ArrowRight,

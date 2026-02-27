@@ -3,13 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { 
-  Users, 
-  Building2, 
   Globe, 
   Award, 
-  History, 
   Target,
-  ArrowRight,
   ShieldCheck,
   Heart
 } from "lucide-react";
@@ -123,7 +119,7 @@ export default function AboutPage() {
             <div className="bg-white p-10 rounded-[2.5rem] shadow-xl hover:-translate-y-2 transition-transform duration-500 border border-gray-100">
               <Globe className="w-12 h-12 text-[#d4a574] mb-6" />
               <h3 className="text-xl font-bold text-[#4b3624] mb-4">Prime Locations</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">Strategically located in the world's leading business hubs and city centres.</p>
+              <p className="text-gray-500 leading-relaxed text-sm">Strategically located in the world&apos;s leading business hubs and city centres.</p>
             </div>
           </div>
         </div>

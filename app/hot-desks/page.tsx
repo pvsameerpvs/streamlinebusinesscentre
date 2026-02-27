@@ -3,15 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Zap, 
   Users, 
   Globe, 
   CheckCircle2, 
   Coffee, 
   Wifi,
   Clock,
-  Layout,
-  ArrowRight
+  Layout
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

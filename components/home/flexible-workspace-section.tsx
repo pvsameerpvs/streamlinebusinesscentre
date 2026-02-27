@@ -10,8 +10,8 @@ import {
   Users2, 
   Clock, 
   MapPin, 
-  ArrowRight 
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ interface WorkspaceItem {
   title: string;
   desc: string;
   image: string;
-  features: { icon: any; text: string }[];
+  features: { icon: LucideIcon; text: string }[];
   href: string;
 }
 

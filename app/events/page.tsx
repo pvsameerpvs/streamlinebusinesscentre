@@ -1,14 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { 
-  Music, 
   Users, 
   Mic2, 
-  Presentation, 
   Coffee, 
-  Wine, 
   Globe, 
   Star, 
   CheckCircle2, 

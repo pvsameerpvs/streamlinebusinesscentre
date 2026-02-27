@@ -7,13 +7,9 @@ import {
   Monitor, 
   Wifi, 
   Coffee, 
-  Calendar, 
   Presentation, 
-  CheckCircle2, 
   ArrowRight,
-  Globe,
   Tv,
-  Mic2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

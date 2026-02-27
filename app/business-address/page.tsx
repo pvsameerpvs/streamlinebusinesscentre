@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Building2,
   MapPin,
   Phone,
   Mail,
@@ -11,12 +10,9 @@ import {
   CheckCircle2,
   Target,
   Users,
-  Shield,
-  Search,
   ArrowRight,
   Monitor,
   Plus,
-  Briefcase,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -89,11 +85,11 @@ export default function BusinessAddressPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#4b3624] mb-6">
               More Than Just an Address
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our Business Address is part of a wider range of virtual office
-              solutions. Explore our packages to find the level of support
-              that's right for your business.
-            </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our Business Address is part of a wider range of virtual office
+                solutions. Explore our packages to find the level of support
+                that&apos;s right for your business.
+              </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

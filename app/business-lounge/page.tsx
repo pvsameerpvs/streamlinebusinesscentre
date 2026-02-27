@@ -7,7 +7,6 @@ import {
   Wifi, 
   Users, 
   Globe, 
-  Clock, 
   CheckCircle2, 
   ArrowRight,
   Armchair,
