@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { StreamGallery } from "@/components/stream-gallery";
 
 export default function AboutPage() {
   return (
@@ -127,6 +128,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <StreamGallery />
 
       {/* CTA Section */}
       <section className="py-24 bg-white">

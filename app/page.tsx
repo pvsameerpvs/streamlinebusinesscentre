@@ -6,6 +6,7 @@ import { FlexibleWorkspaceSection } from "@/components/home/flexible-workspace-s
 import { ContactSection } from "@/components/home/contact-section";
 import { AmenitiesMarquee } from "@/components/home/amenities-marquee";
 import { CustomerHeroSection } from "@/components/home/customer-hero-section";
+import { StreamGallery } from "@/components/stream-gallery";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,9 @@ export default function HomePage() {
       <FlexibleWorkspaceSection />
 
       <CustomerHeroSection />
+
+      {/* Gallery Section */}
+      <StreamGallery />
 
       {/* Contact / form */}
       <ContactSection />

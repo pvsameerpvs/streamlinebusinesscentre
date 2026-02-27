@@ -20,6 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { StreamGallery } from "@/components/stream-gallery";
 
 const contactFormSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -316,6 +317,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <StreamGallery />
     </div>
   );
 }

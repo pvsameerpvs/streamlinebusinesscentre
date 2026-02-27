@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { StreamGallery } from "@/components/stream-gallery";
 
 const locations = [
   {
@@ -130,6 +131,9 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <StreamGallery />
 
       {/* Global Network */}
       <section className="py-24 bg-white">
