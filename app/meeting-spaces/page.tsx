@@ -49,9 +49,11 @@ export default function MeetingSpacesPage() {
               from quiet interview rooms to impressive boardrooms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                Book a Meeting Room
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
+                  Book a Meeting Room
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team at</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -336,9 +338,11 @@ export default function MeetingSpacesPage() {
                     Our meeting rooms are fully prepared. Book in advance or on the day, and we'll ensure everything is set up for your arrival.
                   </p>
                   <div className="space-y-6">
-                    <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 py-7 text-xl w-full sm:w-auto shadow-xl">
-                      Book a Room
-                    </Button>
+                    <Link href="/contact">
+                      <Button size="lg" className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] rounded-full px-12 py-7 text-xl w-full sm:w-auto shadow-xl">
+                        Book a Room
+                      </Button>
+                    </Link>
                     <div className="flex flex-col gap-2">
                        <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Have Questions?</p>
                        <a href="tel:+971505229908" className="text-3xl font-bold text-[#4b3624] hover:text-[#d4a574] transition-colors">

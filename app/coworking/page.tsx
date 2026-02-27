@@ -50,12 +50,14 @@ export default function CoworkingPage() {
               startups, and established businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg"
-              >
-                Get started today
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg"
+                >
+                  Get started today
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team on</span>
                 <a
@@ -293,12 +295,14 @@ export default function CoworkingPage() {
                     <span>Personalised recommendations</span>
                   </div>
                 </div>
-                <Button
-                  size="lg"
-                  className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full"
-                >
-                  Talk to an expert
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full"
+                  >
+                    Talk to an expert
+                  </Button>
+                </Link>
               </div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-8 border-white/10 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
                 <Image
@@ -581,12 +585,14 @@ export default function CoworkingPage() {
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Join a worldwide community of over 8 million professionals.
             </h3>
-            <Button
-              size="lg"
-              className="bg-[#d4a574] hover:bg-[#c49665] text-white px-12 py-7 text-xl rounded-full"
-            >
-              Enquire now
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#d4a574] hover:bg-[#c49665] text-white px-12 py-7 text-xl rounded-full"
+              >
+                Enquire now
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

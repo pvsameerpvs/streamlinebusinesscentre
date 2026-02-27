@@ -19,16 +19,16 @@ export function SiteFooter() {
               </p>
             </div>
             <div className="flex gap-4">
-              <Link href="#" className="text-gray-400 hover:text-[#d4a574]">
+              <Link href="https://facebook.com/streamlinebusinesscentre" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a574]">
                 <Facebook className="h-4 w-4" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#d4a574]">
+              <Link href="https://twitter.com/streamlinedubai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a574]">
                 <Twitter className="h-4 w-4" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#d4a574]">
+              <Link href="https://instagram.com/streamlinebusinesscentre" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a574]">
                 <Instagram className="h-4 w-4" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[#d4a574]">
+              <Link href="https://linkedin.com/company/streamline-business-centre" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a574]">
                 <Linkedin className="h-4 w-4" />
               </Link>
             </div>

@@ -135,7 +135,7 @@ export default function RegisterPage() {
             <div className="flex items-start gap-3 py-2">
               <input type="checkbox" className="mt-1 accent-[#d4a574]" id="terms" />
               <label htmlFor="terms" className="text-[10px] text-gray-500 leading-normal">
-                I agree to Streamline's <Link href="/help" className="text-[#d4a574] font-bold hover:underline">Terms of Service</Link> and <Link href="/help" className="text-[#d4a574] font-bold hover:underline">Privacy Policy</Link>.
+                I agree to Streamline's <Link href="/terms" className="text-[#d4a574] font-bold hover:underline">Terms of Service</Link> and <Link href="/privacy" className="text-[#d4a574] font-bold hover:underline">Privacy Policy</Link>.
               </label>
             </div>
 

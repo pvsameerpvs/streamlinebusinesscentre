@@ -141,9 +141,11 @@ export default function PhoneBoothsPage() {
                     Join Membership
                  </Button>
                </Link>
-               <a href="tel:+971505229908" className="bg-white/10 hover:bg-white/20 border border-white/20 px-12 h-16 rounded-full flex items-center justify-center font-bold transition-colors">
-                  Enquire now
-               </a>
+               <Link href="/contact">
+                 <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 border-white/20 text-white rounded-full px-12 h-16 text-lg">
+                    Enquire now
+                 </Button>
+               </Link>
             </div>
          </div>
       </section>

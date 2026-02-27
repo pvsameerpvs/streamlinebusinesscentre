@@ -41,9 +41,11 @@ export default function ConferenceRoomsPage() {
               with full on-site support and premium technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
-                Book a Room
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full shadow-lg">
+                  Book a Room
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Available in 4,000+ locations</span>
                 <a href="tel:+971505229908" className="font-bold text-white hover:text-[#d4a574] transition-colors">
@@ -85,9 +87,11 @@ export default function ConferenceRoomsPage() {
                   </div>
                 ))}
               </div>
-              <Button size="lg" className="mt-12 bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
-                 Enquire now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="mt-12 bg-[#4b3624] text-white rounded-full px-10 h-16 shadow-xl group">
+                   Enquire now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
               <Image src="/meeting-spaces3.jpeg" alt="Meeting Setup" fill className="object-cover" />

@@ -48,12 +48,14 @@ export default function OfficeSpacePage() {
               most—building and growing your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full"
-              >
-                Get started today
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full"
+                >
+                  Get started today
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team at</span>
                 <a
@@ -121,9 +123,11 @@ export default function OfficeSpacePage() {
                 </div>
               ))}
             </div>
-            <Button className="mt-10 bg-[#4b3624] text-white hover:bg-[#3d2c1d] px-8 py-6 rounded-full">
-              Explore Available Options
-            </Button>
+            <Link href="/contact">
+              <Button className="mt-10 bg-[#4b3624] text-white hover:bg-[#3d2c1d] px-8 py-6 rounded-full">
+                Explore Available Options
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -547,19 +551,23 @@ export default function OfficeSpacePage() {
             maintenance included.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] px-10 py-7 text-lg rounded-full shadow-xl"
-            >
-              Find Your Office
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#4b3624] text-[#4b3624] px-10 py-7 text-lg rounded-full"
-            >
-              View All Locations
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#4b3624] text-white hover:bg-[#3d2c1d] px-10 py-7 text-lg rounded-full shadow-xl"
+              >
+                Find Your Office
+              </Button>
+            </Link>
+            <Link href="/locations">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#4b3624] text-[#4b3624] px-10 py-7 text-lg rounded-full"
+              >
+                View All Locations
+              </Button>
+            </Link>
           </div>
           <p className="mt-12 text-[#d4a574] font-medium tracking-wide uppercase text-sm">
             You focus on your business. We’ll handle the workspace.

@@ -46,12 +46,14 @@ export default function VirtualOfficesPage() {
               world—without the cost or commitment of a physical office.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full"
-              >
-                Enquire now
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 text-lg rounded-full"
+                >
+                  Enquire now
+                </Button>
+              </Link>
               <div className="flex flex-col items-center sm:items-start text-sm">
                 <span className="text-gray-300">Speak with our team on</span>
                 <a
@@ -247,12 +249,14 @@ export default function VirtualOfficesPage() {
                     <span className="text-sm">Tailored Support</span>
                   </div>
                 </div>
-                <Button
-                  size="lg"
-                  className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full"
-                >
-                  Talk to an expert
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="bg-[#d4a574] hover:bg-[#c39665] text-white px-10 py-7 text-lg rounded-full"
+                  >
+                    Talk to an expert
+                  </Button>
+                </Link>
               </div>
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl skew-y-2 group-hover:skew-y-0 transition-transform duration-700">
                 <Image
@@ -499,19 +503,23 @@ export default function VirtualOfficesPage() {
             plans.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 py-7 text-lg shadow-xl"
-            >
-              Enquire now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#4b3624] text-[#4b3624] rounded-full px-12 py-7 text-lg"
-            >
-              View All Locations
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#d4a574] text-white hover:bg-[#b58b61] rounded-full px-12 py-7 text-lg shadow-xl"
+              >
+                Enquire now
+              </Button>
+            </Link>
+            <Link href="/locations">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#4b3624] text-[#4b3624] rounded-full px-12 py-7 text-lg"
+              >
+                View All Locations
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

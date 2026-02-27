@@ -46,19 +46,23 @@ export default function BusinessAddressPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex gap-4">
-                <Button
-                  size="lg"
-                  className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 rounded-full"
-                >
-                  Find a location
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 backdrop-blur-md border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
-                >
-                  Enquire now
-                </Button>
+                <Link href="/locations">
+                  <Button
+                    size="lg"
+                    className="bg-[#d4a574] hover:bg-[#b08963] text-white px-8 py-6 rounded-full"
+                  >
+                    Find a location
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-white/10 backdrop-blur-md border-white text-white hover:bg-white/20 px-8 py-6 rounded-full"
+                  >
+                    Enquire now
+                  </Button>
+                </Link>
               </div>
               <div className="flex flex-col items-center sm:items-start text-sm mt-4 sm:mt-0 sm:ml-6">
                 <span className="text-gray-300">Speak with our team on</span>
@@ -430,19 +434,23 @@ export default function BusinessAddressPage() {
             </a>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#d4a574] hover:bg-[#c39665] text-white rounded-full px-12 py-7 text-lg shadow-xl"
-            >
-              Enquire now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#4b3624] rounded-full px-12 py-7 text-lg"
-            >
-              View All Locations
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#d4a574] hover:bg-[#c39665] text-white rounded-full px-12 py-7 text-lg shadow-xl"
+              >
+                Enquire now
+              </Button>
+            </Link>
+            <Link href="/locations">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-[#4b3624] rounded-full px-12 py-7 text-lg"
+              >
+                View All Locations
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
